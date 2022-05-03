@@ -1,6 +1,6 @@
 <?php
 
-class persona{
+class Persona{
     private $nombre;
     private $apellido;
     private $edad;
@@ -46,7 +46,7 @@ class persona{
         return $this->rfc;
     }
 }
-class empleado extends persona{
+class Empleado extends Persona{
     private $no_Empleado;
     private $tiempo_trabajando;
     private $fecha_contratación; 
@@ -95,7 +95,7 @@ class empleado extends persona{
 
 
 }
-class cliente extends persona{
+class Cliente extends Persona{
 
     function __construct($nombrec, $apellidoc, $edadc, $direccionc, $rfcc){
         $this->nombre=$nombrec;
@@ -107,7 +107,7 @@ class cliente extends persona{
     }
 
 }
-class tienda{
+class Tienda{
     
     private $rfc;
     private $nombre;
@@ -159,7 +159,7 @@ class tienda{
 
 }
 
-class mascota{
+class Mascota{
     private $especie;
     private $color;
     private $edad;
@@ -231,3 +231,14 @@ class mascota{
 
 
 }
+$empleado1 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
+$empleado2 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
+$empleado3 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
+$empleado4 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
+$empleado5 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
+$empleado6 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
+// $empleado->SetNombre("Omar")."<br>";
+// $empleado->SetTiempo("2 años")."<br>";
+// $empleado->SetFEcha("2020/11/11")."<br>";
+// $empleado->SetTurno("Matutino")."<br>";
+// echo "el empleado: ".$empleado->GetNombre()." lleva trabajando ".$empleado->GetTiempo()." desde ".$empleado->GetFecha()." en el turno ".$empleado->GetTurno();
