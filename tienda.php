@@ -7,7 +7,7 @@ class persona{
     private $direccion;
     private $rfc;
 
-    function constructorPersona($nombrec, $apellidoc, $edadc, $direccionc, $rfcc){
+    function __construct($nombrec, $apellidoc, $edadc, $direccionc, $rfcc){
         $this->nombre=$nombrec;
         $this->apellido=$apellidoc;
         $this->edad=$edadc;
@@ -52,14 +52,19 @@ class empleado extends persona{
     private $fecha_contratación; 
     private $turno;
     
-
-    function constructorempleado($no_Empleadoc,$tiempo_trabajandoc,$fecha_contrataciónc,$turnoc){
+    function __construct($nombrec, $apellidoc, $edadc, $direccionc, $rfcc,$no_Empleadoc,$tiempo_trabajandoc,$fecha_contrataciónc,$turnoc){
+        $this->nombre=$nombrec;
+        $this->apellido=$apellidoc;
+        $this->edad=$edadc;
+        $this->direccion=$direccionc;
+        $this->rfc=$rfcc;
         $this->no_Empleado=$no_Empleadoc;
         $this->tiempo_trabajando=$tiempo_trabajandoc;
         $this->fecha_contratación=$fecha_contrataciónc;
         $this->turno=$turnoc;
 
     }
+
     function setno_Empleado($no_Empleadoc){
         $this->no_Empleado = $no_Empleadoc;
     }
@@ -92,6 +97,15 @@ class empleado extends persona{
 }
 class cliente extends persona{
 
+    function __construct($nombrec, $apellidoc, $edadc, $direccionc, $rfcc){
+        $this->nombre=$nombrec;
+        $this->apellido=$apellidoc;
+        $this->edad=$edadc;
+        $this->direccion=$direccionc;
+        $this->rfc=$rfcc;
+
+    }
+
 }
 class tienda{
     
@@ -101,7 +115,7 @@ class tienda{
     private $número_empleados;
     private $comisión;
 
-    function constructortienda($rfcc,$nombrec,$turnoc,$número_empleadosc,$comisiónc){
+    function __construct($rfcc,$nombrec,$turnoc,$número_empleadosc,$comisiónc){
 
         $this->rfc=$rfcc;
         $this->nombre=$nombrec;
@@ -154,7 +168,7 @@ class mascota{
     private $precio_Compra;
     private $precioVenta;
 
-    function constructormascota($especiec,$colorc,$edadc,$fecha_llegadac,$cantidadc,$precio_Comprac,$precioVentac){
+    function __construct($especiec,$colorc,$edadc,$fecha_llegadac,$cantidadc,$precio_Comprac,$precioVentac){
         $this->especie=$especiec;
         $this->color=$colorc;
         $this->edad=$edadc;
