@@ -1,35 +1,50 @@
 <?php
 
 class persona{
-    public $Nombre;
-    public $Apellido;
-    public $Edad;
-    public $Direccion;
-    public $RFC;
+    public $nombre;
+    public $apellido;
+    public $edad;
+    public $direccion;
+    public $rfc;
+
+    function constructorPersona($nombrec, $apellidoc, $edadc, $direccionc, $rfcc){
+
+    }
 }
 class empleado extends persona{
-    private $Tiempo_trabajando;
+    private $tiempo_trabajando;
     private $fecha_contratación; 
-    private $Turno;
+    private $turno;
+    function constructorempleado($tiempo_trabajandoc,$fecha_contrataciónc,$turnoc){
+
+    }
+
+
 }
 class cliente extends persona{
 
 }
 class tienda{
     
-    private $RFC;
-    private $Nombre;
-    private $Turno;
-    private $Número_empleados;
+    private $rfc;
+    private $nombre;
+    private $turno;
+    private $número_empleados;
     private $comisión;
+    function constructortienda($rfcc,$nombrec,$turnoc,$número_empleadosc,$comisiónc){
+
+    }
 }
 
 class mascota{
-    private $Especie;
-    private $Color;
+    private $especie;
+    private $color;
     private $edad;
-    private $Fecha_llegada;
+    private $fecha_llegada;
     private $cantidad;
-    private $Precio_Compra;
-    private $PrecioVenta;
+    private $precio_Compra;
+    private $precioVenta;
+    function constructormascota($especiec,$colorc,$edadc,$fecha_llegadac,$cantidadc,$precio_Comprac,$precioVentac){
+
+    }
 }
