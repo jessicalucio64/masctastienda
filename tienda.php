@@ -231,14 +231,9 @@ class Mascota{
 
 
 }
-$empleado1 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
-$empleado2 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
-$empleado3 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
-$empleado4 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
-$empleado5 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
-$empleado6 = new Empleado('Pedro','Pascal',18,'colonia samira','RHGSTN1254S',1,'2 años','20/1/24','matutino');
-// $empleado->SetNombre("Omar")."<br>";
-// $empleado->SetTiempo("2 años")."<br>";
-// $empleado->SetFEcha("2020/11/11")."<br>";
-// $empleado->SetTurno("Matutino")."<br>";
-// echo "el empleado: ".$empleado->GetNombre()." lleva trabajando ".$empleado->GetTiempo()." desde ".$empleado->GetFecha()." en el turno ".$empleado->GetTurno();
+$empleado1 = new Empleado('Pedro','Pascal',18,'colonia samira','PHGSTN1254S',1,'2 años','2020/1/24','matutino');
+$empleado2 = new Empleado('Jorge','Rodriguez',21,'colonia del valle','JHGSTN1254S',2,'1 años','2021/1/24','matutino');
+$empleado3 = new Empleado('Ramiro','Luvia',34,'colonia del norte','RHGSTN1254S',3,'3 años','2020/1/24','matutino');
+$empleado4 = new Empleado('Maria','Sanchez',24,'colonia del sur','MHGSTN1254S',4,'2 meses','2020/1/24','vespertino');
+$empleado5 = new Empleado('Rosa','Morales',27,'colonia del este','AHGSTN1254S',5,'8 meses','2020/1/24','vespertino');
+$empleado6 = new Empleado('Julia','Torres',19,'colonia del oeste','JHGSTN1254S',6,'1 año','2020/1/24','vespertino');
