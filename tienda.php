@@ -90,11 +90,12 @@ class Empleado extends Persona{
         return $this->turno;
     }
 
-
-
-
-
+    public function DatosEmpleado(){
+        echo "mi nombre es ".$this->nombre;
+        }
 }
+
+
 class Cliente extends Persona{
 
     function __construct($nombrec, $apellidoc, $edadc, $direccionc, $rfcc){
@@ -105,6 +106,7 @@ class Cliente extends Persona{
         $this->rfc=$rfcc;
 
     }
+
 
 }
 class Tienda{
@@ -229,11 +231,35 @@ class Mascota{
     }
 
 
-
+    public function DatosMascota(){
+        echo "El ".$this->especie." de color ".$this->color." y de edad ".$this->edad." aun precio de: ".$this->precioVenta;
+    }
 }
+
+
 $empleado1 = new Empleado('Pedro','Pascal',18,'colonia samira','PHGSTN1254S',1,'2 años','2020/1/24','matutino');
 $empleado2 = new Empleado('Jorge','Rodriguez',21,'colonia del valle','JHGSTN1254S',2,'1 años','2021/1/24','matutino');
 $empleado3 = new Empleado('Ramiro','Luvia',34,'colonia del norte','RHGSTN1254S',3,'3 años','2020/1/24','matutino');
 $empleado4 = new Empleado('Maria','Sanchez',24,'colonia del sur','MHGSTN1254S',4,'2 meses','2020/1/24','vespertino');
 $empleado5 = new Empleado('Rosa','Morales',27,'colonia del este','AHGSTN1254S',5,'8 meses','2020/1/24','vespertino');
 $empleado6 = new Empleado('Julia','Torres',19,'colonia del oeste','JHGSTN1254S',6,'1 año','2020/1/24','vespertino');
+
+
+$macota1 = new Mascota('perro','negro','1 año','2020/1/11',3,2500,5000);
+$macota2 = new Mascota('gato','pardo','1 mes','2020/1/11',1,100,500);
+$macota3 = new Mascota('tortuga','moteada','11 dias','2020/1/11',5,2500,5000);
+$macota4 = new Mascota('hamster','blanco','1 mes','2020/1/11',1,500,800);
+$macota5 = new Mascota('hamster','negro','1 mes','2020/1/11',1,500,800);
+$macota6 = new Mascota('perro','blanco','2 mes','2020/1/11',1,900,8000);
+$macota1->DatosMascota();
+
+$cliente1=new cliente ("Guillermo", "Davila", "23", "perla 200", "A12SF345");
+$cliente2=new cliente ("Daniela", "Torres", "26", "Altamirano 110", "D45besg");
+$cliente3=new cliente ("Carlos", "Medina", "30", "coral 100", "JY533535g");
+$cliente4=new cliente ("Isabel", "Flores", "24", "aguamarina #500", "T76H454");
+$cliente5=new cliente ("Sandra", "Lopez", "23", "Amatista #300", "GR4564Dg");
+$cliente6=new cliente ("Josue", "Herandez", "23", "azabache #600", "GTR645643F");
+
+
+$empleado1->DatosEmpleado();
+
