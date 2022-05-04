@@ -91,10 +91,9 @@ class Empleado extends Persona{
     }
 
     public function DatosEmpleado(){
-        echo "mi nombre es ".$this->nombre;
+        echo $this->nombre;
         }
 }
-
 
 class Cliente extends Persona{
 
@@ -106,7 +105,9 @@ class Cliente extends Persona{
         $this->rfc=$rfcc;
 
     }
-
+    public function DatosCliente(){
+        echo $this->nombre;
+        }
 
 }
 class Tienda{
@@ -232,7 +233,7 @@ class Mascota{
 
 
     public function DatosMascota(){
-        echo "El ".$this->especie." de color ".$this->color." y de edad ".$this->edad." aun precio de: ".$this->precioVenta;
+        echo " ".$this->especie." color ".$this->color." con una edad ".$this->edad." con un costo de: ".$this->precioVenta;
     }
 }
 
@@ -245,13 +246,13 @@ $empleado5 = new Empleado('Rosa','Morales',27,'colonia del este','AHGSTN1254S',5
 $empleado6 = new Empleado('Julia','Torres',19,'colonia del oeste','JHGSTN1254S',6,'1 año','2020/1/24','vespertino');
 
 
-$macota1 = new Mascota('perro','negro','1 año','2020/1/11',3,2500,5000);
-$macota2 = new Mascota('gato','pardo','1 mes','2020/1/11',1,100,500);
-$macota3 = new Mascota('tortuga','moteada','11 dias','2020/1/11',5,2500,5000);
-$macota4 = new Mascota('hamster','blanco','1 mes','2020/1/11',1,500,800);
-$macota5 = new Mascota('hamster','negro','1 mes','2020/1/11',1,500,800);
-$macota6 = new Mascota('perro','blanco','2 mes','2020/1/11',1,900,8000);
-$macota1->DatosMascota();
+$mascota1 = new Mascota('perro','negro','1 año','2020/1/11',3,2500,5000);
+$mascota2 = new Mascota('gato','pardo','1 mes','2020/1/11',1,100,500);
+$mascota3 = new Mascota('tortuga','moteada','11 dias','2020/1/11',5,2500,5000);
+$mascota4 = new Mascota('hamster','blanco','1 mes','2020/1/11',1,500,800);
+$mascota5 = new Mascota('hamster','negro','1 mes','2020/1/11',1,500,800);
+$mascota6 = new Mascota('perro','blanco','2 mes','2020/1/11',1,900,8000);
+
 
 $cliente1=new cliente ("Guillermo", "Davila", "23", "perla 200", "A12SF345");
 $cliente2=new cliente ("Daniela", "Torres", "26", "Altamirano 110", "D45besg");
@@ -261,8 +262,26 @@ $cliente5=new cliente ("Sandra", "Lopez", "23", "Amatista #300", "GR4564Dg");
 $cliente6=new cliente ("Josue", "Herandez", "23", "azabache #600", "GTR645643F");
 
 
-$empleado1->DatosEmpleado();
 
-class ventas{
-    
+
+if(isset($_POST['enviar'])){
+    echo "Venta de: ";
+    $mascota1->DatosMascota();
+    echo " por parte del empleado ";
+    $d=rand(1,6);
+    if($d == 1){
+        $empleado1->DatosEmpleado();
+    }else if($d == 2){
+        $empleado2->DatosEmpleado();
+    }else if($d == 3){
+        $empleado3->DatosEmpleado();
+    }else if($d == 4){
+        $empleado4->DatosEmpleado();
+    }else if($d == 5){
+        $empleado5->DatosEmpleado();
+    }else if($d == 6){
+        $empleado6->DatosEmpleado();
+    }
+    echo " Para el señor(o/a)    ";
+    $cliente1->DatosCliente();
 }
