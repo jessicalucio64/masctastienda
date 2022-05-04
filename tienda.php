@@ -279,26 +279,35 @@ if(isset($_POST['enviar'])){
     $d1=rand(1,6);
     $d2=rand(1,6);
     $d3=rand(1,6);
+    
     echo "Tienda ";
     if($d3 == 1){
         $tienda1->DatosTienda();
         $tienda=$tienda1->getcomisión();
+        $turno=$tienda1->getturno();
     }else if($d3 == 2){
         $tienda2->DatosTienda();
         $tienda=$tienda1->getcomisión();
+        $turno=$tienda1->getturno();
     }else if($d3 == 3){
         $tienda3->DatosTienda();
         $tienda=$tienda1->getcomisión();
+        $turno=$tienda1->getturno();
     }else if($d3 == 4){
         $tienda4->DatosTienda();
         $tienda=$tienda1->getcomisión();
+        $turno=$tienda1->getturno();
     }else if($d3 == 5){
         $tiend5->DatosTienda();
         $tienda=$tienda1->getcomisión();
+        $turno=$tienda1->getturno();
     }else if($d3 == 6){
         $tienda6->DatosTienda();
         $tienda=$tienda1->getcomisión();
+        $turno=$tienda1->getturno();
     }
+    echo "<br>";
+    echo $turno;
     echo "<br>";
     echo "Venta de:";
     echo "<br>";
