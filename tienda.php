@@ -263,3 +263,6 @@ $cliente6=new cliente ("Josue", "Herandez", "23", "azabache #600", "GTR645643F")
 
 $empleado1->DatosEmpleado();
 
+class ventas{
+    
+}
