@@ -233,7 +233,7 @@ class Mascota{
 
 
     public function DatosMascota(){
-        echo " ".$this->especie." color ".$this->color." con una edad ".$this->edad." con un costo de: ".$this->precioVenta;
+        echo " ".$this->especie." color ".$this->color."<br> con una edad ".$this->edad."<br> con un costo de: ".$this->precioVenta;
     }
 }
 
@@ -265,10 +265,28 @@ $cliente6=new cliente ("Josue", "Herandez", "23", "azabache #600", "GTR645643F")
 
 
 if(isset($_POST['enviar'])){
-    echo "Venta de: ";
-    $mascota1->DatosMascota();
-    echo " por parte del empleado ";
     $d=rand(1,6);
+    $d1=rand(1,6);
+    $d2=rand(1,6);
+    echo "Venta de:";
+    echo "<br>";
+    if($d2 == 1){
+        $mascota1->DatosMascota();
+    }else if($d2 == 2){
+        $mascota2->DatosMascota();
+    }else if($d2 == 3){
+        $mascota3->DatosMascota();
+    }else if($d2 == 4){
+        $mascota4->DatosMascota();
+    }else if($d2 == 5){
+        $mascota5->DatosMascota();
+    }else if($d2 == 6){
+        $mascota6->DatosMascota();
+    }
+    echo "<br>";
+    echo "por parte del empleado ";
+    
+    
     if($d == 1){
         $empleado1->DatosEmpleado();
     }else if($d == 2){
@@ -282,6 +300,21 @@ if(isset($_POST['enviar'])){
     }else if($d == 6){
         $empleado6->DatosEmpleado();
     }
-    echo " Para el señor(o/a)    ";
-    $cliente1->DatosCliente();
+    echo "<br>";
+    echo "Para el señor(o/a) ";
+    
+    
+    if($d1 == 1){
+        $cliente1->DatosCliente();
+    }else if($d1 == 2){
+        $cliente2->DatosCliente();
+    }else if($d1 == 3){
+        $cliente3->DatosCliente();
+    }else if($d1 == 4){
+        $cliente4->DatosCliente();
+    }else if($d1 == 5){
+        $cliente5->DatosCliente();
+    }else if($d1 == 6){
+        $cliente6->DatosCliente();
+    }
 }
