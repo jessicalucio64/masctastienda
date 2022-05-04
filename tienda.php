@@ -159,6 +159,10 @@ class Tienda{
     function getcomisión(){
         return $this->comisión;
     }
+    public function DatosTienda(){
+        echo $this->nombre;
+    }
+    
 
 }
 
@@ -261,6 +265,12 @@ $cliente4=new cliente ("Isabel", "Flores", "24", "aguamarina #500", "T76H454");
 $cliente5=new cliente ("Sandra", "Lopez", "23", "Amatista #300", "GR4564Dg");
 $cliente6=new cliente ("Josue", "Herandez", "23", "azabache #600", "GTR645643F");
 
+$tienda1=new Tienda("A1243V","Patitas","matutino","6","0.05");
+$tienda2=new Tienda("A1243V","Patitas","matutino","6","0.05");
+$tienda3=new Tienda("A1243V","Patitas","vespertino","6","0.05");
+$tienda4=new Tienda("A1243V","Patitas","matutino","6","0.05");
+$tienda5=new Tienda("A1243V","Patitas","vespertino","6","0.05");
+$tienda6=new Tienda("A1243V","Patitas","matutino","6","0.05");
 
 
 
@@ -268,21 +278,57 @@ if(isset($_POST['enviar'])){
     $d=rand(1,6);
     $d1=rand(1,6);
     $d2=rand(1,6);
+    $d3=rand(1,6);
+    echo "Tienda ";
+    if($d3 == 1){
+        $tienda1->DatosTienda();
+        $tienda=$tienda1->getcomisión();
+    }else if($d3 == 2){
+        $tienda2->DatosTienda();
+        $tienda=$tienda1->getcomisión();
+    }else if($d3 == 3){
+        $tienda3->DatosTienda();
+        $tienda=$tienda1->getcomisión();
+    }else if($d3 == 4){
+        $tienda4->DatosTienda();
+        $tienda=$tienda1->getcomisión();
+    }else if($d3 == 5){
+        $tiend5->DatosTienda();
+        $tienda=$tienda1->getcomisión();
+    }else if($d3 == 6){
+        $tienda6->DatosTienda();
+        $tienda=$tienda1->getcomisión();
+    }
+    echo "<br>";
     echo "Venta de:";
     echo "<br>";
+    
     if($d2 == 1){
         $mascota1->DatosMascota();
+        $mascota=$mascota1->getprecioVenta();
     }else if($d2 == 2){
         $mascota2->DatosMascota();
+        $mascota=$mascota2->getprecioVenta();
     }else if($d2 == 3){
         $mascota3->DatosMascota();
+        $mascota=$mascota3->getprecioVenta();
     }else if($d2 == 4){
         $mascota4->DatosMascota();
+        $mascota=$mascota4->getprecioVenta();
     }else if($d2 == 5){
         $mascota5->DatosMascota();
+        $mascota=$mascota5->getprecioVenta();
     }else if($d2 == 6){
         $mascota6->DatosMascota();
+        $mascota=$mascota6->getprecioVenta();
     }
+    echo "<br>";
+    echo "Comision de:";
+    echo $tienda;
+    echo "<br>";
+    echo "Comision generada:";
+    $total=($tienda*$mascota);
+    echo $total;
     echo "<br>";
     echo "por parte del empleado ";
     
