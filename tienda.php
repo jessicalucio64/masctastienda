@@ -298,7 +298,7 @@ if(isset($_POST['enviar'])){
         $tienda=$tienda1->getcomisión();
         $turno=$tienda1->getturno();
     }else if($d3 == 5){
-        $tiend5->DatosTienda();
+        $tienda5->DatosTienda();
         $tienda=$tienda1->getcomisión();
         $turno=$tienda1->getturno();
     }else if($d3 == 6){
