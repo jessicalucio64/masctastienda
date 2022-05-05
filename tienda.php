@@ -1,5 +1,5 @@
 <?php
-// Nadie estuvo aquí
+
 class Persona{
     private $nombre;
     private $apellido;
