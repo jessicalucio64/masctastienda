@@ -279,7 +279,15 @@ if(isset($_POST['enviar'])){
     $d1=rand(1,6);
     $d2=rand(1,6);
     $d3=rand(1,6);
-    
+    echo"<table border='1' bordercolor='#00CC99' bgcolor='#99CC00' align='center'>
+    <tr class='sr'>
+    <th>Apartamento
+    <th>Cédula
+    <th>Fecha
+    <th>Deuda
+    <th>Descuento
+   </table><br>";
+   
     echo "Tienda ";
     if($d3 == 1){
         $tienda1->DatosTienda();
@@ -298,7 +306,7 @@ if(isset($_POST['enviar'])){
         $tienda=$tienda1->getcomisión();
         $turno=$tienda1->getturno();
     }else if($d3 == 5){
-        $tienda5->DatosTienda();
+        $tiend5->DatosTienda();
         $tienda=$tienda1->getcomisión();
         $turno=$tienda1->getturno();
     }else if($d3 == 6){
