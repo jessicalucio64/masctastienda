@@ -302,9 +302,9 @@ $empleado6 = new Empleado('Julia', 'Torres', 19, 'colonia del oeste', 'JHGSTN125
 $mascota1 = new Mascota('perro', 'negro', '1 año', '2020/1/11', 3, 2500, 5000);
 $mascota2 = new Mascota('gato', 'pardo', '1 mes', '2020/1/11', 1, 100, 500);
 $mascota3 = new Mascota('tortuga', 'moteada', '11 dias', '2020/1/11', 5, 2500, 5000);
-$mascota4 = new Mascota('hamster', 'blanco', '1 mes', '2020/1/11', 1, 500, 800);
+$mascota4 = new Mascota('aguila', 'blanco', '1 mes', '2020/1/11', 1, 500, 800);
 $mascota5 = new Mascota('hamster', 'negro', '1 mes', '2020/1/11', 1, 500, 800);
-$mascota6 = new Mascota('perro', 'blanco', '2 mes', '2020/1/11', 1, 900, 8000);
+$mascota6 = new Mascota('Serpiente', 'blanco', '2 mes', '2020/1/11', 1, 900, 8000);
 
 
 $cliente1 = new cliente("Guillermo", "Davila", "23", "perla 200", "A12SF345");
@@ -325,185 +325,174 @@ $tienda6 = new Tienda("A1243V", "Patitas", "matutino", "6", "0.05");
 
 if (isset($_POST['enviar'])) {
     $ti = $tienda1->getnombre();
-    echo "<table border='1' bordercolor='#7c7c7c' bgcolor='#646464' align='center'>
-    <tr class='sr'>
-    <th>Tienda $ti 
-    <tr class='sr'>
-    <th>Turno
-    <th>Venta
-    <th>Datos
-    <th>Precio
-    <th>Comision
-    <th>Comision gnerada
-    <th>Empleado
-    <th>Cliente
-    </table><br>";
+        for ($i = 1; $i <= 30; $i++) {
+            $d = rand(1, 6);
+            $d1 = rand(1, 6);
+            $d2 = rand(1, 6);
+            $d3 = rand(1, 6);
+            $d4 = rand(1, 2);
 
 
-    for ($i = 1; $i <= 6; $i++) {
+            if ($d3 == 1) {
 
-        $d = rand(1, 6);
-        $d1 = rand(1, 6);
-        $d2 = rand(1, 6);
-        $d3 = rand(1, 6);
-        $d4 = rand(1, 2);
-        
+                $tienda = $tienda1->getcomisión();
+                $turno = $tienda1->getturno();
+                //echo $tienda;
+                //echo $turno;
+            } else if ($d3 == 2) {
 
-        if ($d3 == 1) {
+                $tienda = $tienda1->getcomisión();
+                $turno = $tienda1->getturno();
+                // echo $tienda;
+                // echo $turno;
+            } else if ($d3 == 3) {
 
-            $tienda = $tienda1->getcomisión();
-            $turno = $tienda1->getturno();
-            echo $tienda;
-            echo $turno;
-        } else if ($d3 == 2) {
+                $tienda = $tienda1->getcomisión();
+                $turno = $tienda1->getturno();
+                // echo $tienda;
+                // echo $turno;
+            } else if ($d3 == 4) {
 
-            $tienda = $tienda1->getcomisión();
-            $turno = $tienda1->getturno();
-            echo $tienda;
-            echo $turno;
-        } else if ($d3 == 3) {
+                $tienda = $tienda1->getcomisión();
+                $turno = $tienda1->getturno();
+                // echo $tienda;
+                // echo $turno;
+            } else if ($d3 == 5) {
 
-            $tienda = $tienda1->getcomisión();
-            $turno = $tienda1->getturno();
-            echo $tienda;
-            echo $turno;
-        } else if ($d3 == 4) {
+                $tienda = $tienda1->getcomisión();
+                $turno = $tienda1->getturno();
+                // echo $tienda;
+                // echo $turno;
+            } else if ($d3 == 6) {
 
-            $tienda = $tienda1->getcomisión();
-            $turno = $tienda1->getturno();
-            echo $tienda;
-            echo $turno;
-        } else if ($d3 == 5) {
-
-            $tienda = $tienda1->getcomisión();
-            $turno = $tienda1->getturno();
-            echo $tienda;
-            echo $turno;
-        } else if ($d3 == 6) {
-
-            $tienda = $tienda1->getcomisión();
-            $turno = $tienda1->getturno();
-            echo $tienda;
-            echo $turno;
-        }
-        if($d4 == 1){
-            
-            if ($d2 == 1) {
-                //$mascota1->DatosMascota();
-                $especie = $mascota1->getespecie();
-                $color = $mascota1->getcolor();
-                $edad = $mascota1->getedad();
-                $mascota = $mascota1->getprecioVenta();
-                echo $especie;
-                echo $color;
-                echo $edad;
-                echo $mascota;
-            } else if ($d2 == 2) {
-                //$mascota2->DatosMascota();
-                $especie = $mascota2->getespecie();
-                $color = $mascota2->getcolor();
-                $edad = $mascota2->getedad();
-                $mascota = $mascota2->getprecioVenta();
-                echo $especie;
-                echo $color;
-                echo $edad;
-                echo $mascota;
-            } else if ($d2 == 3) {
-                //$mascota3->DatosMascota();
-                $especie = $mascota3->getespecie();
-                $color = $mascota3->getcolor();
-                $edad = $mascota3->getedad();
-                $mascota = $mascota3->getprecioVenta();
-                echo $especie;
-                echo $color;
-                echo $edad;
-                echo $mascota;
-            } else if ($d2 == 4) {
-                //$mascota4->DatosMascota();
-                $especie = $mascota4->getespecie();
-                $color = $mascota4->getcolor();
-                $edad = $mascota4->getedad();
-                $mascota = $mascota4->getprecioVenta();
-                echo $especie;
-                echo $color;
-                echo $edad;
-                echo $mascota;
-            } else if ($d2 == 5) {
-                //$mascota5->DatosMascota();
-                $especie = $mascota5->getespecie();
-                $color = $mascota5->getcolor();
-                $edad = $mascota5->getedad();
-                $mascota = $mascota5->getprecioVenta();
-                echo $especie;
-                echo $color;
-                echo $edad;
-                echo $mascota;
-            } else if ($d2 == 6) {
-                //$mascota6->DatosMascota();
-                $especie = $mascota6->getespecie();
-                $color = $mascota6->getcolor();
-                $edad = $mascota6->getedad();
-                $mascota = $mascota6->getprecioVenta();
-                echo $especie;
-                echo $color;
-                echo $edad;
-                echo $mascota;
+                $tienda = $tienda1->getcomisión();
+                $turno = $tienda1->getturno();
+                // echo $tienda;
+                // echo $turno;
             }
-            $total = ($tienda * $mascota);
-        }else{
-            $especie = "";
-            $color = "";
-            $edad = "";
-            $mascota = "";
-            $total = 0;
+            if ($d4 == 1) {
 
-        }
+                if ($d2 == 1) {
+                    //$mascota1->DatosMascota();
+                    $especie = $mascota1->getespecie();
+                    $color = $mascota1->getcolor();
+                    $edad = $mascota1->getedad();
+                    $mascota = $mascota1->getprecioVenta();
+                    // echo $especie;
+                    // echo $color;
+                    // echo $edad;
+                    // echo $mascota;
+                } else if ($d2 == 2) {
+                    //$mascota2->DatosMascota();
+                    $especie = $mascota2->getespecie();
+                    $color = $mascota2->getcolor();
+                    $edad = $mascota2->getedad();
+                    $mascota = $mascota2->getprecioVenta();
+                    // echo $especie;
+                    // echo $color;
+                    // echo $edad;
+                    // echo $mascota;
+                } else if ($d2 == 3) {
+                    //$mascota3->DatosMascota();
+                    $especie = $mascota3->getespecie();
+                    $color = $mascota3->getcolor();
+                    $edad = $mascota3->getedad();
+                    $mascota = $mascota3->getprecioVenta();
+                    // echo $especie;
+                    // echo $color;
+                    // echo $edad;
+                    // echo $mascota;
+                } else if ($d2 == 4) {
+                    //$mascota4->DatosMascota();
+                    $especie = $mascota4->getespecie();
+                    $color = $mascota4->getcolor();
+                    $edad = $mascota4->getedad();
+                    $mascota = $mascota4->getprecioVenta();
+                    // echo $especie;
+                    // echo $color;
+                    // echo $edad;
+                    // echo $mascota;
+                } else if ($d2 == 5) {
+                    //$mascota5->DatosMascota();
+                    $especie = $mascota5->getespecie();
+                    $color = $mascota5->getcolor();
+                    $edad = $mascota5->getedad();
+                    $mascota = $mascota5->getprecioVenta();
+                    // echo $especie;
+                    // echo $color;
+                    // echo $edad;
+                    // echo $mascota;
+                } else if ($d2 == 6) {
+                    //$mascota6->DatosMascota();
+                    $especie = $mascota6->getespecie();
+                    $color = $mascota6->getcolor();
+                    $edad = $mascota6->getedad();
+                    $mascota = $mascota6->getprecioVenta();
+                    // echo $especie;
+                    // echo $color;
+                    // echo $edad;
+                    // echo $mascota;
+                }
+                $total = ($tienda * $mascota);
+            } else {
+                $especie = "";
+                $color = "";
+                $edad = "";
+                $mascota = "";
+                $total = 0;
+            }
 
-        if ($d == 1) {
-            $empleado = $empleado1->DatosEmpleado();
-        } else if ($d == 2) {
-            $empleado = $empleado2->DatosEmpleado();
-        } else if ($d == 3) {
-            $empleado = $empleado3->DatosEmpleado();
-        } else if ($d == 4) {
-            $empleado = $empleado4->DatosEmpleado();
-        } else if ($d == 5) {
-            $empleado = $empleado5->DatosEmpleado();
-        } else if ($d == 6) {
-            $empleado = $empleado6->DatosEmpleado();
-        }
-        if ($d1 == 1) {
-            $nomCliente = $cliente1->DatosCliente();
-        } else if ($d1 == 2) {
-            $nomCliente = $cliente2->DatosCliente();
-        } else if ($d1 == 3) {
-            $nomCliente = $cliente3->DatosCliente();
-        } else if ($d1 == 4) {
-            $nomCliente = $cliente4->DatosCliente();
-        } else if ($d1 == 5) {
-            $nomCliente = $cliente5->DatosCliente();
-        } else if ($d1 == 6) {
-            $nomCliente = $cliente6->DatosCliente();
-        }
-
-        echo "<table border='1' bordercolor='#7c7c7c' bgcolor='#646464' align='center'>
-        <tr class='sr'>
-        <th> $turno
-        <th> $especie
-        <th> Color: $color<br>Edad: $edad
-        <th> $$mascota
-        <th> $tienda
-        <th> $$total
-        <th> $empleado
-        <th> $nomCliente
-        </table><br>";
+            if ($d == 1) {
+                $empleado = $empleado1->DatosEmpleado();
+            } else if ($d == 2) {
+                $empleado = $empleado2->DatosEmpleado();
+            } else if ($d == 3) {
+                $empleado = $empleado3->DatosEmpleado();
+            } else if ($d == 4) {
+                $empleado = $empleado4->DatosEmpleado();
+            } else if ($d == 5) {
+                $empleado = $empleado5->DatosEmpleado();
+            } else if ($d == 6) {
+                $empleado = $empleado6->DatosEmpleado();
+            }
+            if ($d1 == 1) {
+                $nomCliente = $cliente1->DatosCliente();
+            } else if ($d1 == 2) {
+                $nomCliente = $cliente2->DatosCliente();
+            } else if ($d1 == 3) {
+                $nomCliente = $cliente3->DatosCliente();
+            } else if ($d1 == 4) {
+                $nomCliente = $cliente4->DatosCliente();
+            } else if ($d1 == 5) {
+                $nomCliente = $cliente5->DatosCliente();
+            } else if ($d1 == 6) {
+                $nomCliente = $cliente6->DatosCliente();
+            }
+            echo "               
+                <table border='1' bordercolor='#7c7c7c' bgcolor='#646464' align=''>
+                    
+                    <tr >
+                        <th>Turno</th>
+                        <th>Venta</th>
+                        <th>Datos</th>
+                        <th>Precio</th>
+                        <th>Comision</th>
+                        <th>Comision gnerada</th>
+                        <th>Empleado</th>
+                        <th>Cliente</th>
+                    </tr>
+                    <tr>
+                        <td> $turno </td>
+                        <td> $especie</td>
+                        <td> $color, $edad </td>
+                        <td> $mascota</td>
+                        <td> $tienda</td>
+                        <td> $total</td>
+                        <td> $empleado</td>
+                        <td> $nomCliente</td>
+                    </tr>
+                </table > <br>
+            ";
     }
-
-  
-  
-   
-        
     
-
-
 }
